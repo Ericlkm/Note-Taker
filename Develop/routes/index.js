@@ -3,7 +3,7 @@ const { readAndAppend, readFromFile, writeToFile } = require("../utils/util");
 app = express();
 
 app.get("/notes", (req, res) => {
-  readFromFile("./db/notes.json").then((data) => {
+  readFromFile("./db/db.json").then((data) => {
     res.json(JSON.parse(data));
   });
 });
